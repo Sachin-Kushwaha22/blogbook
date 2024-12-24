@@ -20,7 +20,7 @@ connectToDatabase("mongodb+srv://sachin8n:sachin2219@nodetesting01.n48lb.mongodb
 
 app.use(
     cors({
-        origin: "http://localhost:5173",
+        origin: "https://blogbook-frontend.onrender.com/",
         credentials: true,
     })
 );
