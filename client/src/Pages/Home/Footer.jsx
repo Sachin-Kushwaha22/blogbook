@@ -15,7 +15,7 @@ function footer() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:9010/feedback', { feedback: feedback })
+            const response = await axios.post('https://blogbook-backend-t9wn.onrender.com/feedback', { feedback: feedback })
             console.log(response.data);
             if (response.data.message) {
                 window.alert(response.data.message)
