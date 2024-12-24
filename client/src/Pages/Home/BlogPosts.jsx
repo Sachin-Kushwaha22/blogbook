@@ -9,7 +9,7 @@ function BlogPosts() {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get("http://localhost:9010/post/viewblog");
+            const response = await axios.get("https://blogbook-backend-t9wn.onrender.com/post/viewblog");
 
             setBlogData(response.data);
         } catch (err) {
