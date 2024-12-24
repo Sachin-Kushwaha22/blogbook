@@ -12,7 +12,7 @@ function readBlog() {
 
     const fetchBlogPost = async () => {
         try {
-            const response = await axios.get(`http://localhost:9010/post/viewblog/${id}`);
+            const response = await axios.get(`https://blogbook-backend-t9wn.onrender.com/post/viewblog/${id}`);
             setBlogPost(response.data);
         } catch (err) {
             setError(err);
