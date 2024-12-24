@@ -9,13 +9,13 @@ const uploadImage = async (file) => {
     const formData = new FormData();
     formData.append('image', file);
 
-    const response = await fetch('http://localhost:9010/post/uploadblog', {
+    const response = await fetch('https://blogbook-backend-t9wn.onrender.com/post/uploadblog', {
         method: 'POST',
         body: formData,
     });
 
     const data = await response.json();
-    const imageUrl = `http://localhost:9010/post${data.imageUrl}`;
+    const imageUrl = `https://blogbook-backend-t9wn.onrender.com/post${data.imageUrl}`;
     return imageUrl;
 };
 
@@ -58,7 +58,7 @@ const BlogEditor = () => {
             title, 
             content };
         try {
-            const response = await axios.post('http://localhost:9010/post/blog',blogData)
+            const response = await axios.post('https://blogbook-backend-t9wn.onrender.com/post/blog',blogData)
             console.log(response.data)
             // console.log('Blog published:', blogData);
             alert('Your blog has been published!');
