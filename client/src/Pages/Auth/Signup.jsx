@@ -37,7 +37,7 @@ function SignUp() {
     async function handlesignup(e) {
         e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:9010/user/signup", formData, {
+      const response = await axios.post("https://blogbook-backend-t9wn.onrender.com/user/signup", formData, {
         withCredentials: true,
       });
       if (response.data.message) {
