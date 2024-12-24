@@ -5,6 +5,7 @@ const { connectToDatabase } = require("./connection")
 const cookieParser = require("cookie-parser")
 const bodyParser = require("body-parser")
 const app = express()
+require('dotenv').config();
 const PORT = process.env.PORT || 9010
 const userRoute = require("./routes/user")
 const blogRoute = require("./routes/blog")
