@@ -72,7 +72,7 @@ function SignUp() {
 
         if (event.target === passwordInput1) {
             setMainPasswordMessage('')
-            if (passwordInput1.Value.length < 8 || passwordInput1.Value.length > 50) {
+            if (passwordInput1.value.length < 8 || passwordInput1.value.length > 50) {
                 setMainPasswordMessage('Password must be between 8 and 50 characters')
             }
         }
@@ -132,7 +132,7 @@ function SignUp() {
         if (emailInput.value === "") {
             setEmailMessage("")
         }
-        else if(!emailValue.includes('@gmail.com') && !emailValue.includes('@yahoo.com') && !emailValue.includes('@hotmail.com') && !emailValue.includes('@outlook.com')) {
+        else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
             setEmailMessage('Invalid email')
         }
     }
@@ -177,7 +177,7 @@ function SignUp() {
 
                                 <div className="ageandemail">
                                     <label>AGE </label>
-                                    <input onBlur={handleAgeBlur} value={formData.age} onChange={handleMultipleOnChange} id="age" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '');" name="age" placeholder="ex. 19" required />
+                                    <input onBlur={handleAgeBlur} value={formData.age} onChange={handleMultipleOnChange} id="age" type="text" onInput="this.value = this.value.replace(/[^0-9]/g, '');" name="age" placeholder="ex. 19" required />
                                     <p className="agecheck">{agemessage}</p>
                                     <label>EMAIL </label>
                                     <input onBlur={handleemailinput} id="emailsignup" type="email" name="email" value={formData.email} onChange={handleformdata} placeholder="ex. sachinkushwaha@gmail.com" required />
